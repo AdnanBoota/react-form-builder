@@ -275,6 +275,12 @@ export default class ReactForm extends React.Component {
       if (!item) return null;
       switch (item.element) {
         case 'TextInput':
+        case 'BatteryStatus':
+        case 'BTStatus':
+        case 'WFStatus':
+        case 'ScannerStatus':
+        case 'DateTime':
+        case 'List':
         case 'NumberInput':
         case 'TextArea':
         case 'Dropdown':

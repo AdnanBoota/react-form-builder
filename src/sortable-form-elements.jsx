@@ -4,7 +4,7 @@ import BaseFormElements from './form-elements';
 import { TwoColumnRow, ThreeColumnRow, FourColumnRow } from "./multi-column";
 
 const {
-  Header, Paragraph, Label, LineBreak, TextInput, NumberInput, TextArea, Dropdown, Checkboxes,
+  Header, Paragraph, Label, Counter, Scan, Voice, BatteryStatus, BTStatus,WFStatus,ScannerStatus, DateTime, Video, Message, Grid, LineBreak, TextInput, List, NumberInput, TextArea, Dropdown, Checkboxes,
   DatePicker, RadioButtons, Image, Rating, Tags, Signature, HyperLink, Download, Camera, Range,
 } = BaseFormElements;
 
@@ -13,10 +13,30 @@ const FormElements = {};
 FormElements.Header = SortableElement(Header);
 FormElements.Paragraph = SortableElement(Paragraph);
 FormElements.Label = SortableElement(Label);
+FormElements.Counter = SortableElement(Counter);
+FormElements.Scan = SortableElement(Scan);
+FormElements.Voice = SortableElement(Voice);
+FormElements.Video = SortableElement(Video);
+FormElements.Message = SortableElement(Message);
+FormElements.Grid = SortableElement(Grid);
 FormElements.LineBreak = SortableElement(LineBreak);
 FormElements.TextInput = SortableElement(TextInput);
+FormElements.BatteryStatus = SortableElement(BatteryStatus);
+FormElements.BTStatus = SortableElement(BTStatus);
+FormElements.WFStatus = SortableElement(WFStatus);
+FormElements.ScannerStatus = SortableElement(ScannerStatus);
+FormElements.DateTime = SortableElement(DateTime);
+
+
+FormElements.List = SortableElement(List);
 FormElements.NumberInput = SortableElement(NumberInput);
 FormElements.TextArea = SortableElement(TextArea);
+FormElements.BatteryStatus = SortableElement(BatteryStatus);
+FormElements.BTStatus = SortableElement(BTStatus);
+FormElements.WFStatus = SortableElement(WFStatus);
+FormElements.ScannerStatus = SortableElement(ScannerStatus);
+FormElements.DateTime = SortableElement(DateTime);
+
 FormElements.Dropdown = SortableElement(Dropdown);
 FormElements.Signature = SortableElement(Signature);
 FormElements.Checkboxes = SortableElement(Checkboxes);

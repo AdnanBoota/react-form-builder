@@ -68,6 +68,113 @@ class Label extends React.Component {
   }
 }
 
+class Counter extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+
+class Scan extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+
+class Voice extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+
+class Video extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+
+class Message extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+class Grid extends React.Component {
+  render() {
+    let classNames = 'static';
+    if (this.props.data.bold) { classNames += ' bold'; }
+    if (this.props.data.italic) { classNames += ' italic'; }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <label className={classNames} dangerouslySetInnerHTML={{ __html: myxss.process(this.props.data.content) }} />
+      </div>
+    );
+  }
+}
+
 class LineBreak extends React.Component {
   render() {
     let baseClasses = 'SortableItem rfb-item';
@@ -83,6 +190,221 @@ class LineBreak extends React.Component {
 }
 
 class TextInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+class BatteryStatus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+class BTStatus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class WFStatus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+
+class ScannerStatus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+class DateTime extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputField = React.createRef();
+  }
+
+  render() {
+    const props = {};
+    props.type = 'text';
+    props.className = 'form-control';
+    props.name = this.props.data.field_name;
+    if (this.props.mutable) {
+      props.defaultValue = this.props.defaultValue;
+      props.ref = this.inputField;
+    }
+
+    let baseClasses = 'SortableItem rfb-item';
+    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+
+    if (this.props.read_only) {
+      props.disabled = 'disabled';
+    }
+
+    return (
+      <div className={baseClasses}>
+        <ComponentHeader {...this.props} />
+        <div className="form-group">
+          <ComponentLabel {...this.props} />
+          <input {...props} />
+        </div>
+      </div>
+    );
+  }
+}
+
+
+
+
+class List extends React.Component {
   constructor(props) {
     super(props);
     this.inputField = React.createRef();
@@ -702,6 +1024,20 @@ FormElements.Paragraph = Paragraph;
 FormElements.Label = Label;
 FormElements.LineBreak = LineBreak;
 FormElements.TextInput = TextInput;
+
+FormElements.Counter = Counter;
+FormElements.Scan = Scan;
+FormElements.Voice = Voice;
+FormElements.Video = Video;
+FormElements.Message = Message;
+FormElements.Grid = Grid;
+FormElements.BatteryStatus = BatteryStatus;
+FormElements.BTStatus = BTStatus;
+FormElements.WFStatus = WFStatus;
+FormElements.ScannerStatus = ScannerStatus;
+FormElements.DateTime = DateTime;
+FormElements.List = List;
+
 FormElements.NumberInput = NumberInput;
 FormElements.TextArea = TextArea;
 FormElements.Dropdown = Dropdown;
